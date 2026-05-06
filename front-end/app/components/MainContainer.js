@@ -5,13 +5,19 @@ const SIDEBAR_WIDTH = 280;
 const Container = styled.div`
   margin-left: ${SIDEBAR_WIDTH}px;
   width: calc(100% - ${SIDEBAR_WIDTH}px);
-  min-height: 100vh;
   box-sizing: border-box;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
 
   background-color: #eaeaea;
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const MainContent = styled.div`

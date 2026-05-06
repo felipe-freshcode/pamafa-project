@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import { routes } from "../constants/routes";
 
 const Container = styled.div`
   /* Auto layout */
@@ -14,6 +15,10 @@ const Container = styled.div`
   z-index: 1;
   top: 0;
   left: 0;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const PaddingImg = styled.div`
@@ -50,15 +55,6 @@ const Text = styled.p`
 
   padding-bottom: 20px;
 `;
-
-const routes = [
-  { label: "Exercício 01", link: "/" },
-  { label: "Exercício 02", link: "/exercicio02" },
-  { label: "Exercício 03", link: "/exercicio03" },
-  { label: "Exercício 04", link: "/exercicio04" },
-  { label: "Exercício 05", link: "/exercicio05" },
-  { label: "Exercício 06", link: "/exercicio06" },
-];
 
 export default function Menu() {
   return (

@@ -7,7 +7,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  gap: 10px;
 
   height: 120px;
 
@@ -20,6 +19,10 @@ const Container = styled.div`
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 const Title = styled.div`
